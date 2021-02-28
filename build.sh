@@ -1,21 +1,21 @@
 #! /bin/sh
 
 # Tutorials
-pushd ./tutorials
+cd ./tutorials
 
 # Timer
-pushd ./timer
+cd ./timer
 
 # Timer1
-pushd ./timer1
+cd ./timer1
 sh ./scripts/build.sh
 
-pushd ./build
+cd ./build
 ./timer1 || exit 1
-popd
+cd ..
 
-popd	# Timer1
+cd ..	# Timer1
 
-popd	# Timer
+cd ..	# Timer
 
-popd	# Tutorials
+cd ..	# Tutorials
