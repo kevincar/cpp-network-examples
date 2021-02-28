@@ -32,7 +32,9 @@ target_include_directories("${PROJECT_NAME}" BEFORE
 # add_subdirectory
 
 # Link your dependencies
-# target_link_libraries()
+target_link_libraries("${PROJECT_NAME}"
+	pthread
+	)
 
 # Add Tests
 #add_subdirectory(tests)
