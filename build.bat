@@ -4,9 +4,9 @@ CD .\tutorials
 CD .\timer
 
 CD .\timer1
-CMD .\scripts\build.bat
+CALL .\scripts\build.bat
 
-CD .\build
+REM CD .\build
 .\Release\timer1.exe
 CD ..
 
