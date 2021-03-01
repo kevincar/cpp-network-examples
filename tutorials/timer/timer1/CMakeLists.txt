@@ -13,6 +13,18 @@ execute_process(
   COMMAND git clone https://github.com/chriskohlhoff/networking-ts-impl "${CMAKE_CURRENT_BINARY_DIR}/deps/networking-ts-impl"
   )
 set(NETWORK_TS_INCLUDES "${CMAKE_CURRENT_BINARY_DIR}/deps/networking-ts-impl/include")
+macro(get_WIN32_WINNT version)
+    if (WIN32 AND CMAKE_SYSTEM_VERSION)
+        set(ver ${CMAKE_SYSTEM_VERSION})
+        string(REPLACE "." "" ver ${ver})
+        string(REGEX REPLACE "([0-9])" "0\\1" ver ${ver})
+
+		set(${version} "0x${ver}")
+    endif()
+endmacro()
+
+get_WIN32_WINNT(ver)
+add_definitions(-D_WIN32_WINNT=${ver})
 
 # Build the app
 add_executable("${PROJECT_NAME}"
@@ -32,8 +44,14 @@ target_include_directories("${PROJECT_NAME}" BEFORE
 # add_subdirectory
 
 # Link your dependencies
+
+if(NOT WIN32)
+	set(PTHREAD_LIB "pthread")
+else()
+	set(PTHREAD_LIB "")
+endif()
 target_link_libraries("${PROJECT_NAME}"
-	pthread
+	"${PTHREAD_LIB}"
 	)
 
 # Add Tests
