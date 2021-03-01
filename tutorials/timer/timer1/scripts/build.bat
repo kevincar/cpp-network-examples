@@ -7,14 +7,11 @@ IF exist ".\build\" (
 	RMDIR /S /Q build
 )
 
-ECHO "Create build directory"
+ECHO "Creating build directory"
 MKDIR build
 
 ECHO "Moving into build directory"
 CD build
-
-ECHO "Enabling MSVC Dev Tools"
-REM CALL "%MSVCTools%/VsDevCmd.bat"
 
 ECHO "Generating build environment..."
 cmake ..

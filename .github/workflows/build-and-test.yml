@@ -43,8 +43,12 @@ jobs:
       # Tutorials
       # Timer
       # Timer1
-      - name: timer1
+      - name: nix timer1
+        if: runner.os != 'Windows'
         run: ./build.sh
+      - name: nix windows
+        if: runner.os == 'Windows'
+        run: ./build.bat
 
       # Build
       #- name: Windows Build
