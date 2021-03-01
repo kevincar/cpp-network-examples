@@ -9,6 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS ON)
 
 # Insert Dependencies here
+# experimental/net
 execute_process(
   COMMAND git clone https://github.com/chriskohlhoff/networking-ts-impl "${CMAKE_CURRENT_BINARY_DIR}/deps/networking-ts-impl"
   )
@@ -22,9 +23,10 @@ macro(get_WIN32_WINNT version)
 		set(${version} "0x${ver}")
     endif()
 endmacro()
-
-get_WIN32_WINNT(ver)
-add_definitions(-D_WIN32_WINNT=${ver})
+if(WIN32)
+	get_WIN32_WINNT(ver)
+	add_definitions(-D_WIN32_WINNT=${ver})
+endif()
 
 # Build the app
 add_executable("${PROJECT_NAME}"
