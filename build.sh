@@ -58,11 +58,18 @@ cd ..
 cd ..	# Daytime 1
 
 # Daytime 2
-cd ./daytime1
+cd ./daytime2
 sh ./scripts/build.sh
 cd ./build
 cd ..
-cd ..	# Daytime 1
+cd ..	# Daytime 2
+
+# Daytime 3
+cd ./daytime3
+sh ./scripts/build.sh
+cd ./build
+cd ..
+cd ..	# Daytime 3
 
 cd ..	# Daytime
 

@@ -47,6 +47,11 @@ CALL .\scripts\build.bat
 CD ..
 CD ..
 
+CD .\daytime3
+CALL .\scripts\build.bat
+CD ..
+CD ..
+
 CD ..
 
 CD ..
