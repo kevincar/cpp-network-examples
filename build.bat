@@ -34,5 +34,14 @@ CD ..
 CD ..
 
 CD ..
+CD .\daytime
+
+CD .\daytime1
+CALL .\scripts\build.bat
+.\Release\daytime1.exe localhost
+CD ..
+CD ..
+
+CD ..
 
 CD ..

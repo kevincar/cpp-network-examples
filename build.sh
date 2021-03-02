@@ -47,5 +47,16 @@ cd ..
 cd ..	# Timer5
 
 cd ..	# Timer
+cd ./daytimer
+
+# Daytime 1
+cd ./daytime1
+sh ./scripts/build.sh
+cd ./build
+./daytime1 localhost || exit 1
+cd ..
+cd ..	# Daytime 1
+
+cd ..	# Daytime
 
 cd ..	# Tutorials
