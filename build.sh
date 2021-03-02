@@ -38,6 +38,14 @@ cd ./build
 cd ..
 cd ..	# Timer4
 
+# Timer5
+cd ./timer5
+sh ./scripts/build.sh
+cd ./build
+./timer5 || exit 1
+cd ..
+cd ..	# Timer5
+
 cd ..	# Timer
 
 cd ..	# Tutorials
