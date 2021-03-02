@@ -22,13 +22,21 @@ cd ./build
 cd ..
 cd ..	# Timer2
 
-# Timer2
+# Timer3
 cd ./timer3
 sh ./scripts/build.sh
 cd ./build
 ./timer3 || exit 1
 cd ..
 cd ..	# Timer3
+
+# Timer4
+cd ./timer4
+sh ./scripts/build.sh
+cd ./build
+./timer4 || exit 1
+cd ..
+cd ..	# Timer4
 
 cd ..	# Timer
 

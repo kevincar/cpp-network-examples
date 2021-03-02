@@ -17,7 +17,13 @@ CD ..
 
 CD .\timer3
 CALL .\scripts\build.bat
-.\Release\timer2.exe
+.\Release\timer3.exe
+CD ..
+CD ..
+
+CD .\timer4
+CALL .\scripts\build.bat
+.\Release\timer3.exe
 CD ..
 CD ..
 
