@@ -57,6 +57,11 @@ CALL .\scripts\build.bat
 CD ..
 CD ..
 
+CD .\daytime5
+CALL .\scripts\build.bat
+CD ..
+CD ..
+
 CD ..
 
 CD ..

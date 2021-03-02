@@ -78,6 +78,13 @@ cd ./build
 cd ..
 cd ..	# Daytime 4
 
+# Daytime 5
+cd ./daytime5
+sh ./scripts/build.sh
+cd ./build
+cd ..
+cd ..	# Daytime 5
+
 cd ..	# Daytime
 
 cd ..	# Tutorials
