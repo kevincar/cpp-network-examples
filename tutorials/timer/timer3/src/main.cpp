@@ -1,6 +1,7 @@
 #include <experimental/net>
 #include <iostream>
 #include <chrono>
+#include <functional>
 
 void print(std::error_code const& e, std::experimental::net::steady_timer* t,
     int* count) {
