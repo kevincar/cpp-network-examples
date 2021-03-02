@@ -62,6 +62,11 @@ CALL .\scripts\build.bat
 CD ..
 CD ..
 
+CD .\daytime6
+CALL .\scripts\build.bat
+CD ..
+CD ..
+
 CD ..
 
 CD ..
