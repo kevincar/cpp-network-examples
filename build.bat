@@ -5,11 +5,14 @@ CD .\timer
 
 CD .\timer1
 CALL .\scripts\build.bat
-
-REM CD .\build
 .\Release\timer1.exe
 CD ..
+CD ..
 
+CD .\timer2
+CALL .\scripts\build.bat
+.\Release\timer2.exe
+CD ..
 CD ..
 
 CD ..
