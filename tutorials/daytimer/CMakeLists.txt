@@ -35,6 +35,7 @@ add_executable("${PROJECT_NAME}3" "src/${PROJECT_NAME}3.cpp")
 add_executable("${PROJECT_NAME}4" "src/${PROJECT_NAME}4.cpp")
 add_executable("${PROJECT_NAME}5" "src/${PROJECT_NAME}5.cpp")
 add_executable("${PROJECT_NAME}6" "src/${PROJECT_NAME}6.cpp")
+add_executable("${PROJECT_NAME}7" "src/${PROJECT_NAME}7.cpp")
 
 # Include directories for your dependencies so that the #include directive
 # works
@@ -44,6 +45,7 @@ target_include_directories("${PROJECT_NAME}3" BEFORE PUBLIC include ${NETWORK_TS
 target_include_directories("${PROJECT_NAME}4" BEFORE PUBLIC include ${NETWORK_TS_INCLUDES})
 target_include_directories("${PROJECT_NAME}5" BEFORE PUBLIC include ${NETWORK_TS_INCLUDES})
 target_include_directories("${PROJECT_NAME}6" BEFORE PUBLIC include ${NETWORK_TS_INCLUDES})
+target_include_directories("${PROJECT_NAME}7" BEFORE PUBLIC include ${NETWORK_TS_INCLUDES})
 
 # Link personally-made dependencies
 # add_subdirectory
@@ -61,6 +63,7 @@ target_link_libraries("${PROJECT_NAME}3" "${PTHREAD_LIB}")
 target_link_libraries("${PROJECT_NAME}4" "${PTHREAD_LIB}")
 target_link_libraries("${PROJECT_NAME}5" "${PTHREAD_LIB}")
 target_link_libraries("${PROJECT_NAME}6" "${PTHREAD_LIB}")
+target_link_libraries("${PROJECT_NAME}7" "${PTHREAD_LIB}")
 
 # Add Tests
 #add_subdirectory(tests)
