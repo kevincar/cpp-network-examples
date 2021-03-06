@@ -19,3 +19,13 @@ CD ..
 CD ..
 
 CD ..
+
+CD .\examples
+
+CD .\chat
+CALL .\scripts\build.bat
+CD ..
+
+CD ..
+
+CD ..

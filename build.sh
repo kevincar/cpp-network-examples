@@ -24,3 +24,13 @@ cd ..
 cd ..	# Daytime
 
 cd ..	# Tutorials
+
+# Examples
+cd ./examples
+
+cd ./chat
+
+sh ./scripts/build.sh
+cd .. # chat
+
+cd .. # Examples
